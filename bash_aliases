@@ -13,6 +13,7 @@ fi
 
 alias rebash='source ~/.bashrc; clear'
 alias base='clear; cd ~'
+alias bashreconfig='bash <(wget -qO- https://raw.githubusercontent.com/rfpludwick/bash-config/master/install-no-git.sh)'
 
 if [ -f ~/.bash_aliases_local ]; then
     . ~/.bash_aliases_local

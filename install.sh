@@ -2,7 +2,7 @@
 
 echo Removing old Bash configuration...
 
-rm ~/.bash_aliases ~/.bash_exports ~/.bash_logout ~/.bash_profile ~/.bashrc 2> /dev/null
+rm ~/.bash_aliases ~/.bash_exports ~/.bash_logout ~/.bash_profile ~/.bashrc ~/.vimrc 2> /dev/null
 
 echo Installing new Bash configuration...
 
