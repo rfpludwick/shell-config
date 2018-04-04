@@ -11,7 +11,7 @@ else
 	alias ls='ls -alhF'
 fi
 
-alias rebash='source ~/.bash_profile; clear'
+alias rebash='source ~/.bashrc; clear'
 alias base='clear; cd ~'
 
 if [ -f ~/.bash_aliases_local ]; then

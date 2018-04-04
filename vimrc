@@ -7,6 +7,6 @@ set showmode
 
 syntax on
 
-if (!empty(glob("$HOME/.vimrc_local")))
-	source $HOME/.vimrc_local
+if (!empty(glob("~/.vimrc_local")))
+	source ~/.vimrc_local
 endif

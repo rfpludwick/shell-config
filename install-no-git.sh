@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-mkdir $HOME/.bash-config
-pushd $HOME/.bash-config
+mkdir ~/.bash-config
+pushd ~/.bash-config
 wget https://github.com/rfpludwick/bash-config/archive/master.tar.gz
 tar -xvf master.tar.gz --strip-components=1
 rm master.tar.gz
