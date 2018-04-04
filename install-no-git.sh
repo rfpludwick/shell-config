@@ -6,4 +6,4 @@ wget https://github.com/rfpludwick/bash-config/archive/master.tar.gz
 tar -xvf master.tar.gz --strip-components=1
 rm master.tar.gz
 popd
-~/install.sh
+~/.bash-config/install.sh
