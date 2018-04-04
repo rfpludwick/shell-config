@@ -5,8 +5,8 @@
 # Usage
 
 ```bash
-git clone https://github.com/rfpludwick/bash-config .bash-config
-.bash-config/install.sh
+git clone https://github.com/rfpludwick/bash-config $HOME/.bash-config
+$HOME/.bash-config/install.sh
 ```
 
 Installing without `git` on the system?
