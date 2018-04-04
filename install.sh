@@ -10,6 +10,7 @@ ln -snf $HOME/.bash-config/bash_aliases $HOME/.bash_aliases
 ln -snf $HOME/.bash-config/bash_exports $HOME/.bash_exports
 ln -snf $HOME/.bash-config/bash_logout $HOME/.bash_logout
 ln -snf $HOME/.bash-config/bash_profile $HOME/.bash_profile
+ln -snf $HOME/.bash-config/vimrc $HOME/.vimrc
 ln -snf $HOME/.bash_profile $HOME/.bashrc
 
 echo Sourcing...

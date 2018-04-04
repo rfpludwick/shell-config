@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
-mkdir .bash-config
-wget -qO- https://github.com/rfpludwick/bash-config/archive/master.tar.gz | tar -xvf -C .bash-config --strip-components=1
+mkdir $HOME/.bash-config
+cd $HOME/.bash-config
+wget https://github.com/rfpludwick/bash-config/archive/master.tar.gz
+tar -xvf master.tar.gz --strip-components=1
+rm master.tar.gz
 ./install.sh
