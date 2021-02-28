@@ -2,8 +2,8 @@
 
 mkdir -p ~/.bash-config
 pushd ~/.bash-config
-wget https://github.com/rfpludwick/bash-config/archive/master.tar.gz
-tar -xvf master.tar.gz --strip-components=1
-rm master.tar.gz
+curl -o bash-config.tgz https://codeload.github.com/rfpludwick/bash-config/tar.gz/main
+tar -xvf bash-config.tgz --strip-components=1
+rm bash-config.tgz
 popd
 ~/.bash-config/install.sh
