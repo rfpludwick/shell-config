@@ -12,5 +12,5 @@ git clone https://github.com/rfpludwick/bash-config ~/.bash-config
 Installing without `git` on the system?
 
 ```bash
-bash <(wget -qO- https://raw.githubusercontent.com/rfpludwick/bash-config/master/install-no-git.sh)
+bash <(wget -qO- https://raw.githubusercontent.com/rfpludwick/bash-config/main/install-no-git.sh)
 ```
