@@ -2,7 +2,7 @@
 
 **bash-config** is really just my personal Bash configuration. So, yeah.
 
-# Usage
+## Usage
 
 ```bash
 git clone https://github.com/rfpludwick/bash-config ~/.bash-config
