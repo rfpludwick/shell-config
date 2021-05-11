@@ -1,16 +1,22 @@
 # About
 
-**bash-config** is really just my personal Bash configuration. So, yeah.
+**shell-config** is really just my personal shell configurations. So, yeah.
 
 ## Usage
 
+### Bash
+
+Please install first using a non-root user.
+
 ```bash
-git clone https://github.com/rfpludwick/bash-config ~/.bash-config
-~/.bash-config/install.sh
+git clone https://github.com/rfpludwick/shell-config
+shell-config/bash/install/main.sh
 ```
 
 Installing without `git` on the system?
 
 ```bash
-bash <(wget -qO- https://raw.githubusercontent.com/rfpludwick/bash-config/main/install-no-git.sh)
+bash <(wget -qO- https://raw.githubusercontent.com/rfpludwick/bash-config/main/bash/install/no-git.sh)
 ```
+
+If you want to setup the root user too, then run `bash/install/main.sh` as root.

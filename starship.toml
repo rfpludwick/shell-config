@@ -1,0 +1,14 @@
+[hostname]
+ssh_only = false
+
+[status]
+disabled = false
+
+[time]
+disabled    = false
+format      = "🕙 [$time]($style) "
+time_format = "%a, %b %d %Y - %T"
+
+[username]
+format      = "[$user]($style) on "
+show_always = true
