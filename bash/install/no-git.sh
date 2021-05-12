@@ -22,4 +22,5 @@ tar -xvf shell-config.tgz --strip-components=1
 rm -v shell-config.tgz
 popd
 
-"${HOME}"/.shell-config/bash/install/main.sh "${SUDO_STARSHIP_INSTALL}"
+# shellcheck disable=SC1091
+. "${HOME}"/.shell-config/bash/install/main.sh "${SUDO_STARSHIP_INSTALL}"
