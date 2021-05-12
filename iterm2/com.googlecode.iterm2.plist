@@ -4,16 +4,6 @@
 <dict>
 	<key>AlternateMouseScroll</key>
 	<true/>
-	<key>AppleAntiAliasingThreshold</key>
-	<integer>1</integer>
-	<key>ApplePressAndHoldEnabled</key>
-	<false/>
-	<key>AppleScrollAnimationEnabled</key>
-	<integer>0</integer>
-	<key>AppleSmoothFixedFontsSizeThreshold</key>
-	<integer>1</integer>
-	<key>AppleWindowTabbingMode</key>
-	<string>manual</string>
 	<key>Default Bookmark Guid</key>
 	<string>A9BBEF5A-5CCC-4463-80AF-3831012B14A0</string>
 	<key>HapticFeedbackForEsc</key>
