@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-if [ "$EUID" -ne 0 ]; then
+if [ "$EUID" -ne 0 ] || grep --quiet docker /proc/1/cgroup; then
 	echo Installing Starship and coreutils
 
 	if brew commands &> /dev/null; then
