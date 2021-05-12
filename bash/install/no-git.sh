@@ -5,7 +5,7 @@ SUDO_STARSHIP_INSTALL=""
 while getopts "s" options; do
 	case "${options}" in
 		s)
-			SUDO_STARSHIP_INSTALL=" -s"
+			SUDO_STARSHIP_INSTALL="-s"
 			;;
 		*)
 			echo Unsupported getopts
@@ -13,6 +13,7 @@ while getopts "s" options; do
 			;;
 	esac
 done
+shift $((OPTIND-1))
 
 mkdir -pv "${HOME}"/.shell-config
 pushd "${HOME}"/.shell-config
@@ -21,4 +22,4 @@ tar -xvf shell-config.tgz --strip-components=1
 rm -v shell-config.tgz
 popd
 
-"${HOME}"/.shell-config/bash/install/main.sh"${SUDO_STARSHIP_INSTALL}"
+"${HOME}"/.shell-config/bash/install/main.sh "${SUDO_STARSHIP_INSTALL}"

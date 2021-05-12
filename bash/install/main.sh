@@ -13,6 +13,7 @@ while getopts "s" options; do
 			;;
 	esac
 done
+shift $((OPTIND-1))
 
 if [ "$EUID" -ne 0 ] || grep --quiet docker /proc/1/cgroup; then
 	echo Installing Starship and coreutils
