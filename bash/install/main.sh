@@ -1,10 +1,26 @@
 #!/bin/bash -e
 
+SUDO_STARSHIP_INSTALL=false
+
+while getopts "s" options; do
+	case "${options}" in
+		s)
+			SUDO_STARSHIP_INSTALL=true
+			;;
+		*)
+			echo Unsupported getopts
+			exit 1
+			;;
+	esac
+done
+
 if [ "$EUID" -ne 0 ] || grep --quiet docker /proc/1/cgroup; then
 	echo Installing Starship and coreutils
 
 	if brew commands &> /dev/null; then
 		brew install starship coreutils
+	elif ${SUDO_STARSHIP_INSTALL}; then
+		sudo sh -c "$(curl -fsSL https://starship.rs/install.sh)" -- -f
 	else
 		sh -c "$(curl -fsSL https://starship.rs/install.sh)" -- -f
 	fi
