@@ -6,7 +6,7 @@ if [ "$EUID" -ne 0 ] || grep --quiet docker /proc/1/cgroup; then
 	if brew commands &> /dev/null; then
 		brew install starship coreutils
 	else
-		sh -c "$(curl -fsSL https://starship.rs/install.sh)"
+		sh -c "$(curl -fsSL https://starship.rs/install.sh)" -- -f
 	fi
 fi
 
