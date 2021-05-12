@@ -4,6 +4,8 @@
 
 ## Usage
 
+Download and install [Sauce Code Pro Nerd Font](https://www.nerdfonts.com/font-downloads) first.
+
 ### Bash
 
 Please install first using a non-root user.
