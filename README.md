@@ -12,13 +12,13 @@ Please install first using a non-root user. If your non-root user needs `sudo` t
 
 ```bash
 git clone https://github.com/rfpludwick/shell-config
-shell-config/bash/install/main.sh
+shell-config/bash/install/main.sh [-s (sudo for Starship install)]
 ```
 
 Installing without `git` on the system?
 
 ```bash
-bash <(wget -qO- https://raw.githubusercontent.com/rfpludwick/bash-config/main/bash/install/no-git.sh)
+wget -qO- https://raw.githubusercontent.com/rfpludwick/bash-config/main/bash/install/no-git.sh | bash -s [-- -s (sudo for Starship install)]
 ```
 
 If you want to setup the root user too, then run `bash/install/main.sh` as root.

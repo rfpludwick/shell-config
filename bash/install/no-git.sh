@@ -23,4 +23,4 @@ rm -v shell-config.tgz
 popd
 
 # shellcheck disable=SC1091
-. "${HOME}"/.shell-config/bash/install/main.sh "${SUDO_STARSHIP_INSTALL}"
+"${HOME}"/.shell-config/bash/install/main.sh "${SUDO_STARSHIP_INSTALL}"
