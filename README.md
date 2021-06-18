@@ -4,11 +4,14 @@
 
 ## Usage
 
-Download and install [Sauce Code Pro Nerd Font](https://www.nerdfonts.com/font-downloads) first.
+Download and install
+[Sauce Code Pro Nerd Font](https://www.nerdfonts.com/font-downloads) first.
 
 ### Bash
 
-Please install first using a non-root user. If your non-root user needs `sudo` to install Starship, add the `-s` parameter to the invocation of the install script.
+Please install first using a non-root user. If your non-root user needs `sudo`
+to install Starship, add the `-s` parameter to the invocation of the install
+script.
 
 ```bash
 git clone https://github.com/rfpludwick/shell-config

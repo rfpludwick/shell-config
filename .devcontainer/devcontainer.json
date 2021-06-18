@@ -1,0 +1,14 @@
+{
+	"image": "${localEnv:RFPLUDWICK_NEXUS_HOSTNAME}/vscode/base:latest",
+	"postCreateCommand": "bash .devcontainer/provision.sh",
+	"initializeCommand": "bash .devcontainer/initialize.sh",
+	"extensions": [
+		"github.vscode-pull-request-github",
+		"eamodio.gitlens",
+		"timonwong.shellcheck",
+		"davidanson.vscode-markdownlint"
+	],
+	"remoteEnv": {
+		"TZ": "America/Los_Angeles"
+	}
+}

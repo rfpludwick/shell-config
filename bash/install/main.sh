@@ -88,7 +88,7 @@ ln -snfv "${HOME}"/.bash_profile "${HOME}"/.bashrc
 
 echo Sourcing...
 
-# shellcheck disable=SC1091
+# shellcheck disable=SC1090 disable=SC1091
 source "${HOME}"/.bashrc
 
 echo Done
