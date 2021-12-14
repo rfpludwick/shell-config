@@ -15,7 +15,7 @@ while getopts "s" options; do
 done
 shift $((OPTIND-1))
 
-if [ "$EUID" -ne 0 ] || grep --quiet docker /proc/1/cgroup; then
+if [ "$EUID" -ne 0 ] || grep --quiet docker /proc/1/cgroup || [ -f /.dockerenv ]; then
 	echo Installing Starship and coreutils
 
 	if brew commands &> /dev/null; then
