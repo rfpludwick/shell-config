@@ -47,10 +47,6 @@ if [ -d "${HOME}"/.bash-config ]; then
 	echo Archiving existing bash config directory
 
 	mv -v "${HOME}"/.bash-config "${HOME}"/.shell-config-archive
-elif [ -d "${HOME}"/.shell-config ] && [ ! -L "${HOME}"/.shell-config ]; then
-	echo Archiving existing shell config directory
-
-	mv -v "${HOME}"/.bash-config "${HOME}"/.shell-config-archive
 elif [ ! -d "${HOME}"/.shell-config-archive ]; then
 	echo Creating shell config archive directory
 
