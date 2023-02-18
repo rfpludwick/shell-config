@@ -1,4 +1,7 @@
-#!/bin/bash -e
+#!/usr/bin/env bash
+
+set -e
+set -o pipefail
 
 SUDO_STARSHIP_INSTALL=false
 
