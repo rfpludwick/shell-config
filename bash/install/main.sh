@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-set -e
-set -o pipefail
+set -exo pipefail
 
 SUDO_STARSHIP_INSTALL=false
 
@@ -34,7 +33,7 @@ fi
 if [ ! -d "${HOME}"/.config ]; then
 	echo Creating user config directory
 
-	mkdir -v "${HOME}"/.config
+	mkdir "${HOME}"/.config
 fi
 
 echo Archiving old Bash configuration...
@@ -43,60 +42,60 @@ echo Archiving old Bash configuration...
 if [ -d "${HOME}"/.bash-config-archive ]; then
 	echo Removing old shell config archive directory
 
-	rm -Rfv "${HOME}"/.shell-config-archive
+	rm --recursive --force "${HOME}"/.shell-config-archive
 fi
 
 if [ -d "${HOME}"/.bash-config ]; then
 	echo Archiving existing bash config directory
 
-	mv -v "${HOME}"/.bash-config "${HOME}"/.shell-config-archive
+	mv "${HOME}"/.bash-config "${HOME}"/.shell-config-archive
 elif [ ! -d "${HOME}"/.shell-config-archive ]; then
 	echo Creating shell config archive directory
 
-	mkdir -v "${HOME}"/.shell-config-archive
+	mkdir "${HOME}"/.shell-config-archive
 fi
 
 # Archive files
 if [ -f "${HOME}"/.bash_aliases ] && [ ! -L "${HOME}"/.bash_aliases ]; then
 	echo Archiving existing bash aliases
 
-	mv -v "${HOME}"/.bash_aliases "${HOME}"/.shell-config-archive/bash_aliases
+	mv "${HOME}"/.bash_aliases "${HOME}"/.shell-config-archive/bash_aliases
 fi
 
 if [ -f "${HOME}"/.bash_exports ] && [ ! -L "${HOME}"/.bash_exports ]; then
 	echo Archiving existing bash exports
 
-	mv -v "${HOME}"/.bash_exports "${HOME}"/.shell-config-archive/bash_exports
+	mv "${HOME}"/.bash_exports "${HOME}"/.shell-config-archive/bash_exports
 fi
 
 if [ -f "${HOME}"/.bash_logout ] && [ ! -L "${HOME}"/.bash_logout ]; then
 	echo Archiving existing bash logout
 
-	mv -v "${HOME}"/.bash_logout "${HOME}"/.shell-config-archive/bash_logout
+	mv "${HOME}"/.bash_logout "${HOME}"/.shell-config-archive/bash_logout
 fi
 
 if [ -f "${HOME}"/.bash_profile ] && [ ! -L "${HOME}"/.bash_profile ]; then
 	echo Archiving existing bash profile
 
-	mv -v "${HOME}"/.bash_profile "${HOME}"/.shell-config-archive/bash_profile
+	mv "${HOME}"/.bash_profile "${HOME}"/.shell-config-archive/bash_profile
 fi
 
 if [ -f "${HOME}"/.bashrc ] && [ ! -L "${HOME}"/.bashrc ]; then
 	echo Archiving existing bashrc
 
-	mv -v "${HOME}"/.bashrc "${HOME}"/.shell-config-archive/bashrc
+	mv "${HOME}"/.bashrc "${HOME}"/.shell-config-archive/bashrc
 fi
 
 if [ -f "${HOME}"/.config/starship.toml ] && [ ! -L "${HOME}"/.config/starship.toml ]; then
 	echo Archiving existing Starship configuration
 
-	mv -v "${HOME}"/.config/starship.toml "${HOME}"/.shell-config-archive/starship.toml
+	mv "${HOME}"/.config/starship.toml "${HOME}"/.shell-config-archive/starship.toml
 fi
 
 if [ -f "${HOME}"/.vimrc ] && [ ! -L "${HOME}"/.vimrc ]; then
 	echo Archiving existing vimrc
 
-	mv -v "${HOME}"/.vimrc "${HOME}"/.shell-config-archive/vimrc
+	mv "${HOME}"/.vimrc "${HOME}"/.shell-config-archive/vimrc
 fi
 
 echo Checking and symlinking repository
@@ -104,18 +103,18 @@ echo Checking and symlinking repository
 REPOSITORY_DIRECTORY="$(dirname "$(dirname "$(dirname "$(realpath "${0}")")")")"
 
 if [ "${REPOSITORY_DIRECTORY}" != "${HOME}"/.shell-config ]; then
-	ln -snfv "${REPOSITORY_DIRECTORY}" "${HOME}"/.shell-config
+	ln --symbolic --no-dereference --force "${REPOSITORY_DIRECTORY}" "${HOME}"/.shell-config
 fi
 
 echo Installing new Bash configuration...
 
-ln -snfv "${HOME}"/.shell-config/bash/aliases "${HOME}"/.bash_aliases
-ln -snfv "${HOME}"/.shell-config/bash/exports "${HOME}"/.bash_exports
-ln -snfv "${HOME}"/.shell-config/bash/logout "${HOME}"/.bash_logout
-ln -snfv "${HOME}"/.shell-config/bash/profile "${HOME}"/.bash_profile
-ln -snfv "${HOME}"/.shell-config/starship.toml "${HOME}"/.config/starship.toml
-ln -snfv "${HOME}"/.shell-config/vimrc "${HOME}"/.vimrc
-ln -snfv "${HOME}"/.bash_profile "${HOME}"/.bashrc
+ln --symbolic --no-dereference --force "${HOME}"/.shell-config/bash/aliases "${HOME}"/.bash_aliases
+ln --symbolic --no-dereference --force "${HOME}"/.shell-config/bash/exports "${HOME}"/.bash_exports
+ln --symbolic --no-dereference --force "${HOME}"/.shell-config/bash/logout "${HOME}"/.bash_logout
+ln --symbolic --no-dereference --force "${HOME}"/.shell-config/bash/profile "${HOME}"/.bash_profile
+ln --symbolic --no-dereference --force "${HOME}"/.shell-config/starship.toml "${HOME}"/.config/starship.toml
+ln --symbolic --no-dereference --force "${HOME}"/.shell-config/vimrc "${HOME}"/.vimrc
+ln --symbolic --no-dereference --force "${HOME}"/.bash_profile "${HOME}"/.bashrc
 
 echo Sourcing...
 
