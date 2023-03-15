@@ -20,7 +20,7 @@ shift $((OPTIND-1))
 mkdir --parents "${HOME}"/.shell-config
 pushd "${HOME}"/.shell-config
 curl --location https://codeload.github.com/rfpludwick/shell-config/tar.gz/main --output shell-config.tgz
-tar --extract --file  --strip-components=1 shell-config.tgz
+tar --extract --gzip --file shell-config.tgz --strip-components=1
 rm shell-config.tgz
 popd
 
