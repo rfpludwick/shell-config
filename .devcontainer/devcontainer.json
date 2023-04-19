@@ -12,7 +12,6 @@
 		"redhat.vscode-yaml"
 	],
 	"remoteEnv": {
-		"TZ": "America/Los_Angeles",
 		"VAULT_ADDR": "${localEnv:VAULT_ADDR}",
 		"VAULT_GITHUB_TOKEN": "${localEnv:VAULT_GITHUB_TOKEN}"
 	}
