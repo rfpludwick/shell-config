@@ -547,7 +547,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>SauceCodeProNerdFontCo-Regular 14</string>
+			<string>FiraCodeNerdFontCompleteM-Regular 14</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
@@ -650,6 +650,8 @@
 		</dict>
 	</dict>
 	<key>PromptOnQuit</key>
+	<false/>
+	<key>ShowFullScreenTabBar</key>
 	<false/>
 	<key>SoundForEsc</key>
 	<false/>
