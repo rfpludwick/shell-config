@@ -103,18 +103,18 @@ echo Checking and symlinking repository
 REPOSITORY_DIRECTORY="$(dirname "$(dirname "$(dirname "$(realpath "${0}")")")")"
 
 if [ "${REPOSITORY_DIRECTORY}" != "${HOME}"/.shell-config ]; then
-	ln --symbolic --no-dereference --force "${REPOSITORY_DIRECTORY}" "${HOME}"/.shell-config
+	ln -snf "${REPOSITORY_DIRECTORY}" "${HOME}"/.shell-config
 fi
 
 echo Installing new Bash configuration...
 
-ln --symbolic --no-dereference --force "${HOME}"/.shell-config/bash/aliases "${HOME}"/.bash_aliases
-ln --symbolic --no-dereference --force "${HOME}"/.shell-config/bash/exports "${HOME}"/.bash_exports
-ln --symbolic --no-dereference --force "${HOME}"/.shell-config/bash/logout "${HOME}"/.bash_logout
-ln --symbolic --no-dereference --force "${HOME}"/.shell-config/bash/profile "${HOME}"/.bash_profile
-ln --symbolic --no-dereference --force "${HOME}"/.shell-config/starship.toml "${HOME}"/.config/starship.toml
-ln --symbolic --no-dereference --force "${HOME}"/.shell-config/vimrc "${HOME}"/.vimrc
-ln --symbolic --no-dereference --force "${HOME}"/.bash_profile "${HOME}"/.bashrc
+ln -snf "${HOME}"/.shell-config/bash/aliases "${HOME}"/.bash_aliases
+ln -snf "${HOME}"/.shell-config/bash/exports "${HOME}"/.bash_exports
+ln -snf "${HOME}"/.shell-config/bash/logout "${HOME}"/.bash_logout
+ln -snf "${HOME}"/.shell-config/bash/profile "${HOME}"/.bash_profile
+ln -snf "${HOME}"/.shell-config/starship.toml "${HOME}"/.config/starship.toml
+ln -snf "${HOME}"/.shell-config/vimrc "${HOME}"/.vimrc
+ln -snf "${HOME}"/.bash_profile "${HOME}"/.bashrc
 
 echo Sourcing...
 

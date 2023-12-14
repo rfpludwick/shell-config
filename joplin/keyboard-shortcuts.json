@@ -1,0 +1,58 @@
+[
+  {
+    "command": "insertDateTime",
+    "accelerator": "Shift+Cmd+D"
+  },
+  {
+    "command": "setTags",
+    "accelerator": "Shift+Cmd+T"
+  },
+  {
+    "command": "editor.duplicateLine",
+    "accelerator": "Option+Shift+D"
+  },
+  {
+    "command": "editor.indentLess",
+    "accelerator": "Option+["
+  },
+  {
+    "command": "editor.indentMore",
+    "accelerator": "Option+]"
+  },
+  {
+    "command": "historyBackward",
+    "accelerator": "Cmd+["
+  },
+  {
+    "command": "historyForward",
+    "accelerator": "Cmd+]"
+  },
+  {
+    "command": "favsAddNote",
+    "accelerator": null
+  },
+  {
+    "command": "favsAddFolder",
+    "accelerator": null
+  },
+  {
+    "command": "favsAddTag",
+    "accelerator": null
+  },
+  {
+    "command": "convertTextToNewNote",
+    "accelerator": "Ctrl+Option+N"
+  },
+  {
+    "command": "getActiveNoteLink",
+    "accelerator": null
+  },
+  {
+    "command": "tabsPinNote",
+    "accelerator": null
+  },
+  {
+    "command": "toggleOutline",
+    "accelerator": "F9"
+  }
+]
