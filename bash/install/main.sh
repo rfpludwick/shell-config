@@ -2,6 +2,12 @@
 
 set -exo pipefail
 
+if brew commands &> /dev/null; then
+	echo Installing via Brew
+
+	brew install helm jq k9s terraformw
+fi
+
 if [ "$EUID" -ne 0 ] || grep --quiet docker /proc/1/cgroup || [ -f /.dockerenv ]; then
 	echo Installing Starship and coreutils
 
@@ -12,7 +18,17 @@ if [ "$EUID" -ne 0 ] || grep --quiet docker /proc/1/cgroup || [ -f /.dockerenv ]
 	fi
 fi
 
-# Create config directory for Starship, if necessary
+echo Installing bash-preexec
+
+curl https://raw.githubusercontent.com/rcaloras/bash-preexec/master/bash-preexec.sh -o ~/.bash-preexec.sh
+
+echo Installing Atuin
+
+bash <(curl --proto '=https' --tlsv1.2 -sSf https://setup.atuin.sh)
+
+mkdir -p ~/.config/atuin
+
+# Create config directory if necessary
 if [ ! -d "${HOME}"/.config ]; then
 	echo Creating user config directory
 
@@ -96,6 +112,7 @@ ln -snf "${HOME}"/.shell-config/bash/exports "${HOME}"/.bash_exports
 ln -snf "${HOME}"/.shell-config/bash/logout "${HOME}"/.bash_logout
 ln -snf "${HOME}"/.shell-config/bash/profile "${HOME}"/.bash_profile
 ln -snf "${HOME}"/.shell-config/starship.toml "${HOME}"/.config/starship.toml
+ln -snf "${HOME}"/.shell-config/atuin.toml "${HOME}"/.config/atuin/config.toml
 ln -snf "${HOME}"/.shell-config/vimrc "${HOME}"/.vimrc
 ln -snf "${HOME}"/.bash_profile "${HOME}"/.bashrc
 

@@ -25,9 +25,14 @@ if ! shopt -oq posix; then
 	fi
 fi
 
+eval "$(starship init bash)"
+
 if [ -f ~/.bash_profile_local ]; then
 	# shellcheck disable=SC1090
 	. ~/.bash_profile_local
 fi
 
-eval "$(starship init bash)"
+# shellcheck disable=SC1090
+[[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
+
+which atuin &> /dev/null && eval "$(atuin init bash)"
