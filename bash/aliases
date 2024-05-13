@@ -16,7 +16,6 @@ fi
 alias rebash='source ~/.bashrc; clear'
 alias base='clear; cd ~'
 alias bashreconfig='bash <(wget -qO- https://raw.githubusercontent.com/rfpludwick/shell-config/main/bash/install/no-git.sh)'
-alias setup-gitsign='git config --local commit.gpgsign true && git config --local tag.gpgsign true && git config --local gpg.x509.program gitsign && git config --local gpg.format x509'
 alias k='kubectl'
 
 if [ -f ~/.bash_aliases_local ]; then
