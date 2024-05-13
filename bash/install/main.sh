@@ -5,7 +5,7 @@ set -exo pipefail
 if brew commands &> /dev/null; then
 	echo Installing via Brew
 
-	brew install helm jq k9s terraformw
+	brew install helm jq k9s terraform
 fi
 
 if [ "$EUID" -ne 0 ] || grep --quiet docker /proc/1/cgroup || [ -f /.dockerenv ]; then
