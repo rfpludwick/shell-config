@@ -1,5 +1,7 @@
 # About
 
+**NOTE**: I no longer use this repository to setup my shell configurations.
+
 **shell-config** is really just my personal shell configurations. So, yeah.
 
 ## Usage
